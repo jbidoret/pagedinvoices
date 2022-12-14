@@ -1,0 +1,64 @@
+a {text-decoration: none;}
+body {
+  margin: 50px;
+}
+th {
+  text-align: left;
+}
+.total {text-align: right;}
+table + h2 { margin-top: 4em;}
+td a {text-decoration: underline;}
+#new h2 { margin: 0 0 1em; font-weight: bold; }
+#new p {
+  margin-bottom: .5em;
+  display: flex;
+  justify-content: stretch  ;
+  gap: 1em;
+}
+#new textarea,
+#new input { flex: 1;}
+#new textarea {min-height: 4em;}
+#new label { width: 6em;}
+#new .labels label{ flex: 1;}
+#new p:last-child{ justify-content: space-between; align-items: center;}
+#new button { background: #000; color: white; min-width: 6em; border: none; padding: .35em 1em .15em;}
+#new #cancel{background: #999;}
+#new #cancel:hover{background: red;}
+
+h2.ok::after{
+  content: " créée ;)";
+  animation: created 4s 1 forwards;
+}
+@keyframes created {
+  80% { opacity: 1;}
+  100% {opacity: 0;}
+}
+
+#create {
+  position: fixed;
+  top: 30px;
+  right: 50px;
+  background: #000;
+  color: white;
+  font-size: 1.25em;
+  border: none;
+  width: 2em;
+  height: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1em;
+}
+#new {
+  display: none;
+  background: white;
+  position: fixed;
+  inset: 0;
+  padding: 50px;
+}
+#new.visible { display: block;}
+
+
+.quarter {
+  border-bottom: 2px solid;
+}

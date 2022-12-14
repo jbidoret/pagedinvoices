@@ -1,0 +1,72 @@
+
+/* ------------------------------------------ commons */
+
+html { box-sizing: border-box; } *, *::before, *::after { box-sizing: inherit; } html, body { height: 100%; } body { line-height: 1.45; -webkit-font-smoothing: antialiased; } img, picture, video, canvas, svg { display: block; height: auto; max-width: 100%; } html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; } h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; } input, button, textarea, select { font: inherit; margin: 0; } iframe { border: 0; }
+html {
+  font-size: 100%;
+}
+body{
+  font-family: ui-monospace, 
+    Menlo, Monaco, 
+    "Cascadia Mono", "Segoe UI Mono", 
+    "Roboto Mono", 
+    "Oxygen Mono", 
+    "Ubuntu Monospace", 
+    "Source Code Pro",
+    "Fira Mono", 
+    "Droid Sans Mono", 
+    "Courier New", monospace;
+  
+  font-size: 1rem;
+  line-height: 1.35;
+  margin: 0;
+}
+
+
+/* ------------------------------------------ typeset */
+
+h2 {
+  font-size: 1em;
+}
+
+h4 {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: underline;
+  color: currentColor;
+}
+
+.needupdate h1 {
+  animation: needupdate 2s;
+}
+@keyframes needupdate {
+  0% { color: red;}
+  330% {color: black;}
+  66% { color: red;}
+  100% {color: black;}
+}
+
+#id::before {
+  content: "Nº ";
+}
+
+table {
+  width: 100%;
+  margin-top: 1em;
+}
+table{
+  border-collapse: collapse;
+}
+td { 
+  border-top: 1px dashed #000;
+  padding: .5em 0;
+  min-width: 4em;
+}
+td:not(:last-child){padding-right: .5em;}
+tfoot{ font-weight: bold;}
+
+.q,.u,.t, #total {white-space: nowrap; padding-left: .5em; text-align: right; }
+.q, .u {text-align: left;}

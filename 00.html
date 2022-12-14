@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>accentgrave — facture</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/print.css" media="print">
+  <link rel="stylesheet" href="../paged/pagedjs.css">  
+  <script src="../js/beautify.min.js"></script>
+  <script src="../js/beautify-html.min.js"></script>
+  <script src="../paged/paged.polyfill.js"></script>
+  <script src="../js/script.js"></script>
+
+</head>
+<body>
+
+    <header id="header">
+      <h1>studio</h1>
+      <p>Prénom Nom <br>123, adresse postale, 456789 Taville <br>SIRET xxx xxx xxx xxxxx</p>
+    </header>
+
+    <main>
+      <h1>facture</h1>
+      <article>
+        <header>
+          <p id="meta">
+            <span id="id">{id}</span>
+            <span id="date" data-date="{datadate}">{date}</span>
+          </p>
+          <p id="address">
+            <strong id="customer">{customer}</strong>
+            <span id="customeraddress"></span>
+          </p>
+        </header>
+        <div id="details">
+          <h2 id="title">{title}</h2>
+          <div id="invoicedetails">{details}</div>
+        </div>
+        <table id="table" data-id="table">
+          <thead id="thead">
+              <tr>
+                  <th></th>
+                  <th class="q">Q.</th>
+                  <th class="u">U.</th>
+                  <th class="t">T.</th>
+              </tr>
+          </thead>
+          
+          <tfoot>
+              <tr>
+                  <td >Total</td>
+                  <td></td>
+                  <td></td>
+                  <td id="total" data-id="total">{total} €</td>
+              </tr>
+          </tfoot>
+        </table>
+      </article>
+    </main>
+
+    <footer>
+      <div>
+        <p>TVA non applicable,<br>art. 293 B du CGI.</p>
+        <p>Paiement par virement bancaire.</p>
+      </div>
+      <dl>
+        <div><dt>url </dt><dd>myownwebsite.net</dd></div>
+        <div><dt>tél </dt><dd>01.23.45.67.89</dd></div>
+        <div><dt>e-mail </dt><dd>contact@myownwebsite.net</dd></div>
+        <div><dt>rib </dt><dd>XXXXX - XXXXX - XXXXXXXXXXX - XX</dd></div>
+        <div><dt>iban </dt><dd>XXXX XXXX XXXX XXXX XXXX XXXX XXX</dd></div>
+        <div><dt>bic/swift </dt><dd>XXXXXXXXXXX</dd></div>
+      </dl>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+@media print {
+
+  @page {
+      size: 210mm 297mm;
+      margin-top: 4cm;
+      margin-right: 2cm;
+      margin-bottom: 2cm;
+      margin-left: 2cm;
+  }  
+
+  /* notes counter */
+  body{
+    font-size: 11px;
+  }
+
+  #header, main, footer {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 40px;
+  }
+  main {
+    flex:1
+  }
+  .pagedjs_page_content > div{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #header {
+    margin-bottom: 4em;
+  }
+  main h1,
+  #header h1 {font-weight: bold;}
+  #meta {margin-bottom: 1em;}
+  #address strong,
+  #meta span { display: block; }
+  #address {margin-bottom: 4em;}
+
+  main h2 { font-weight: bold;}
+
+
+  
+
+  footer dl > div{ display: flex; }
+  footer dt { width: 8em; }
+}  
